@@ -1,5 +1,5 @@
 // internal-imports
-import { env } from '../config/env.js';
+import { env } from './env.js';
 
 // type-imports
 import type { CorsOptions } from 'cors';
