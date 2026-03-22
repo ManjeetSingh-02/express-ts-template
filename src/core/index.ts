@@ -12,3 +12,6 @@ export { logger } from './logger/winston.js';
 // response
 export { ErrorResponse } from './response/error.js';
 export { SuccessResponse } from './response/success.js';
+
+// utils
+export { default as asyncHandler } from './utils/async-handler.js';
