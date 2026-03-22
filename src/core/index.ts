@@ -9,6 +9,9 @@ export { default as loadModules } from './loader/modules.js';
 // logger
 export { logger } from './logger/winston.js';
 
+// middleware
+export { default as validateZodSchema } from './middleware/zod.js';
+
 // response
 export { ErrorResponse } from './response/error.js';
 export { SuccessResponse } from './response/success.js';
