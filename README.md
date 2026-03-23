@@ -14,10 +14,10 @@ COOKIE_SECRET=minimum_of_32_char_cookie_secret
 
 ## Install dependencies
 ```bash
-pnpm i cookie-parser cors dotenv express mongoose winston winston-daily-rotate-file zod
+pnpm add cookie-parser cors dotenv express mongoose winston winston-daily-rotate-file zod
 ```
 
 ## Install dev dependencies
 ```bash
-pnpm i -D @eslint/js @types/cookie-parser @types/cors @types/express @types/node eslint eslint-config-prettier globals jiti prettier tsx typescript typescript-eslint
+pnpm add -D @eslint/js @types/cookie-parser @types/cors @types/express @types/node eslint eslint-config-prettier globals jiti prettier tsx typescript typescript-eslint
 ```
