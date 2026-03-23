@@ -16,5 +16,8 @@ export { default as validateZodSchema } from './middleware/zod.js';
 export { ErrorResponse } from './response/error.js';
 export { SuccessResponse } from './response/success.js';
 
+// types
+export type { IErrorResponse, ISuccessResponse } from './types/response.js';
+
 // utils
 export { default as asyncHandler } from './utils/async-handler.js';
