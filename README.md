@@ -19,5 +19,5 @@ pnpm add cookie-parser cors dotenv express mongoose winston winston-daily-rotate
 
 ## Install dev dependencies
 ```bash
-pnpm add -D @eslint/js @types/cookie-parser @types/cors @types/express @types/node eslint eslint-config-prettier globals jiti prettier tsx typescript typescript-eslint
+pnpm add -D @eslint/js @types/cookie-parser @types/cors @types/express @types/node eslint eslint-config-prettier globals jiti prettier tsx typescript typescript-eslint tsc-alias
 ```
