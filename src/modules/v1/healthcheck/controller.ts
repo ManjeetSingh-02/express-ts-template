@@ -1,8 +1,8 @@
 // internal-imports
-import { SuccessResponse } from '../../../core/index.js';
+import { SuccessResponse } from '@/core/index.js';
 
 // type-imports
-import type { ISuccessResponse } from '../../../core/index.js';
+import type { ISuccessResponse } from '@/core/index.js';
 import type { Request, Response } from 'express';
 
 // controller for module

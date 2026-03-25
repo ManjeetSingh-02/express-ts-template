@@ -1,5 +1,5 @@
 // internal-imports
-import { corsConfig, env, loadModules } from './core/index.js';
+import { corsConfig, env, loadModules } from '@/core/index.js';
 
 // external-imports
 import cookieParser from 'cookie-parser';

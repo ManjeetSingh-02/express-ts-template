@@ -1,6 +1,6 @@
 // internal-imports
-import { env, logger } from './core/index.js';
-import createApp from './app.js';
+import { env, logger } from '@/core/index.js';
+import createApp from '@/app.js';
 
 // external-imports
 import http from 'http';
