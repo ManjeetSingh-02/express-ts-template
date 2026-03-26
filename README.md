@@ -14,7 +14,7 @@ COOKIE_SECRET=minimum_of_32_char_cookie_secret
 
 ## Install dependencies
 ```bash
-pnpm add cookie-parser cors dotenv express mongoose winston winston-daily-rotate-file zod
+pnpm add cookie-parser cors dotenv express winston winston-daily-rotate-file zod
 ```
 
 ## Install dev dependencies
