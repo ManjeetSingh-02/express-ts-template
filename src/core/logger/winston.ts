@@ -7,7 +7,6 @@ import winston from 'winston';
 
 // create logger instance
 export const logger = winston.createLogger({
-  // logging format
   format: winston.format.combine(
     winston.format.timestamp({ format: APP_CONFIG.WINSTON_CONFIG.TIMESTAMP_FORMAT }),
     winston.format.errors({ stack: true }),
@@ -16,8 +15,12 @@ export const logger = winston.createLogger({
         `(${env.NODE_ENV.toUpperCase()}) ${log.timestamp} [${log.level.toUpperCase()}]: ${log.stack ?? log.message}`
     )
   ),
+  transports: [
+    new winston.transports.Console({
+      format:
+        env.NODE_ENV !== APP_CONFIG.NODE_ENVS.PRODUCTION
+          ? undefined
+          : winston.format.colorize({ all: true }),
+    }),
+  ],
 });
-
-// for non-production environments(development, testing), log to console
-if (env.NODE_ENV !== APP_CONFIG.NODE_ENVS.PRODUCTION)
-  logger.add(new winston.transports.Console({ format: winston.format.colorize({ all: true }) }));
