@@ -3,7 +3,6 @@ export const APP_CONFIG = {
   NODE_ENVS: {
     DEVELOPMENT: 'development',
     PRODUCTION: 'production',
-    TESTING: 'testing',
   } as const,
 
   // all module related constants
