@@ -10,6 +10,7 @@ export { loadModules } from './loader/modules.js';
 export { logger } from './logger/winston.js';
 
 // middleware
+export { errorHandler } from './middleware/error.js';
 export { validateZodSchema } from './middleware/zod.js';
 
 // response

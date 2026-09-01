@@ -1,5 +1,5 @@
 // internal-imports
-import { corsConfig, loadModules } from '@/core/index.js';
+import { corsConfig, errorHandler, loadModules } from '@/core/index.js';
 
 // external-imports
 import cors from 'cors';
@@ -17,7 +17,8 @@ export default async function createApp() {
   application
     .use(cors(corsConfig))
     .use(express.json())
-    .use(express.urlencoded({ extended: true }));
+    .use(express.urlencoded({ extended: true }))
+    .use(errorHandler);
 
   // return the application
   return application;
