@@ -5,11 +5,11 @@ import type { IErrorResponse } from '../types/response.js';
 export class ErrorResponse<I = undefined> extends Error implements IErrorResponse<I> {
   readonly success = false;
   readonly message: string;
-  readonly code: string;
+  readonly code: number;
   readonly issues?: I;
 
   // constructor to initialize ErrorResponse
-  constructor({ message, code, issues }: { message: string; code: string; issues?: I }) {
+  constructor({ message, code, issues }: { message: string; code: number; issues?: I }) {
     // call the parent constructor with the error message
     super(message);
 

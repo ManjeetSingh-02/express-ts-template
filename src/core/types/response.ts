@@ -13,6 +13,6 @@ export interface ISuccessResponse<D = undefined, M = undefined> extends IBaseRes
 // interface for ErrorResponse
 export interface IErrorResponse<I = undefined> extends IBaseResponse {
   readonly success: false;
-  readonly code: string;
+  readonly code: number;
   readonly issues?: I;
 }
