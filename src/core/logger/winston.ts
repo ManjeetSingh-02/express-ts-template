@@ -18,7 +18,7 @@ export const logger = winston.createLogger({
   transports: [
     new winston.transports.Console({
       format:
-        env.NODE_ENV !== APP_CONFIG.NODE_ENVS.PRODUCTION
+        env.NODE_ENV === APP_CONFIG.NODE_ENVS.PRODUCTION
           ? undefined
           : winston.format.colorize({ all: true }),
     }),
