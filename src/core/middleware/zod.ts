@@ -16,7 +16,7 @@ type ValidatedRequestData = {
 
 // function for validating request body using zod schema
 export function validateZodSchema<T extends ValidatedRequestData>(schema: z.ZodType<T>) {
-  return function (request: Request, response: Response, next: NextFunction) {
+  return function (request: Request, _response: Response, next: NextFunction) {
     // validate request against the provided schema
     const result = schema.safeParse({
       body: request.body,
@@ -26,13 +26,11 @@ export function validateZodSchema<T extends ValidatedRequestData>(schema: z.ZodT
 
     // if validation fails
     if (!result.success)
-      return response.status(400).json(
-        new ErrorResponse({
-          message: 'Invalid request data',
-          code: 'VALIDATION_ERROR',
-          issues: z.flattenError(result.error).fieldErrors,
-        })
-      );
+      throw new ErrorResponse({
+        code: 400,
+        message: 'Invalid request data',
+        issues: z.flattenError(result.error).fieldErrors,
+      });
 
     // add validated data to request.validated
     request.validated = result.data;
