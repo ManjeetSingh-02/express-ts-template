@@ -8,7 +8,7 @@ import http from 'http';
 // function to start the server
 async function startServer(): Promise<void> {
   // create express application
-  const application = createApp();
+  const application = await createApp();
 
   // create http server
   const server = http.createServer(application);
