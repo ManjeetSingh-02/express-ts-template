@@ -10,17 +10,17 @@ export default async function createApp() {
   // create express application
   const application = express();
 
-  // attach cors middlewares
-  application.use(cors(corsConfig));
+  // attach middlewares
+  application
+    .use(cors(corsConfig))
+    .use(express.json())
+    .use(express.urlencoded({ extended: true }));
 
   // load all modules
   await loadModules(application);
 
-  // attach other middlewares
-  application
-    .use(express.json())
-    .use(express.urlencoded({ extended: true }))
-    .use(errorHandler);
+  // attach error handler
+  application.use(errorHandler);
 
   // return the application
   return application;
